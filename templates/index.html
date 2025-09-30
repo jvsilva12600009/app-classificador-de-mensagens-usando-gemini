@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Classificador de Emails e Arquivos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Classificador de Emails / PDF / TXT</h1>
+
+        <form method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+                <label>Digite um email ou texto:</label>
+                <textarea id="emailText" name="email_text" placeholder="Cole aqui o texto..."></textarea>
+            </div>
+
+            <div class="input-group">
+                <label>Ou envie um arquivo (PDF ou TXT):</label>
+                <div class="file-upload">
+                    <input type="file" name="file" id="fileInput">
+                    <label for="fileInput" class="file-label">Selecionar arquivo</label>
+                    <span id="file-name">Nenhum arquivo selecionado</span>
+                    <button type="button" id="removeFileBtn" class="remove-file-btn" style="display: none;">❌</button>
+                </div>
+            </div>
+
+            <button type="submit">Classificar</button>
+        </form>
+
+        {% if category and resposta %}
+        <div class="result {% if 'Produtivo' in category %}produtivo{% else %}improdutivo{% endif %}">
+            <p>Categoria detectada: <span class="category">{{ category }}</span></p>
+            <p><strong>Resposta sugerida:</strong></p>
+            <div class="resposta">
+                {{ resposta | replace('\n', '<br><br>') | safe }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

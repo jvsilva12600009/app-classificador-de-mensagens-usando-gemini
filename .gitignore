@@ -1,0 +1,8 @@
+# Pasta de uploads (arquivos enviados pelo usuário)
+uploads/
+
+# Arquivo de variáveis de ambiente
+.env
+
+# Ambiente virtual do Python
+venv/

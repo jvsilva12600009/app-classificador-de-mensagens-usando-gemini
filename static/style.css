@@ -1,0 +1,185 @@
+/* Fundo geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 40px;
+    background: linear-gradient(135deg, #74ebd5 0%, #ACB6E5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Container central */
+.container {
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+/* Título */
+h1 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 140px;
+    padding: 14px 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: vertical;
+    transition: all 0.25s ease;
+    background: #f9f9f9;
+    box-sizing: border-box; /* garante alinhamento perfeito */
+}
+
+/* Foco com efeito mais moderno */
+textarea:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.15);
+    outline: none;
+    background: #fff;
+}
+
+/* Placeholder mais suave */
+textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Suaviza o label para não parecer desalinhado */
+.input-group label {
+    margin-left: 2px;
+}
+
+textarea:disabled {
+    cursor: not-allowed;
+}
+
+/* Upload estilizado */
+.file-upload {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-label {
+    display: inline-block;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #6c63ff, #4cafef);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.file-label:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+#file-name {
+    font-size: 14px;
+    color: #555;
+    font-style: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 220px;
+}
+
+/* Botão de remover arquivo */
+.remove-file-btn {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.remove-file-btn:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+}
+
+/* Botão principal */
+button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #6c63ff, #4cafef);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(108, 99, 255, 0.3);
+}
+
+/* Resultados */
+.result {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: fadeIn 0.5s ease;
+}
+
+.result.produtivo {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.result.improdutivo {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b);
+}
+
+.category {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
