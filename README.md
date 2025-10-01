@@ -1,4 +1,6 @@
 # Aplicativo de Classificação de E-mails com IA
+[🚀 Acessar o site](https://site-para-classificar-email-com-ia.onrender.com/)
+
 
 Este projeto é um teste técnico que consiste em uma aplicação web simples para classificar e-mails em duas categorias: **Produtivo** ou **Improdutivo**, usando técnicas de Inteligência Artificial. O backend é feito em Python com Flask, e o frontend com HTML, CSS e JavaScript.
 
