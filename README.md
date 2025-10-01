@@ -1,4 +1,4 @@
-# Aplicativo de Classificação de E-mails com IA
+# Aplicativo de Classificação de E-mails com IA (TESTE TÉCNICO PARA UMA VAGA)
 [🚀 Acessar o site](https://site-para-classificar-email-com-ia.onrender.com/)
 
 
